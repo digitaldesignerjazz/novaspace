@@ -1,0 +1,101 @@
+# NovaSpace .gitignore
+# Comprehensive ignore rules for multi-language, multi-domain project
+# (Rust, Python, Node, Docker, AI/ML, hardware configs, sensitive data)
+
+# === General ===
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+.env
+.env.local
+.env.*.local
+*.env
+secrets/
+private/
+artifacts/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# === Rust ===
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# === Node.js / npm / yarn ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# === Docker ===
+docker-compose.override.yml
+.dockerignore
+
+# === IDEs & Editors ===
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+.history/
+
+# === AI / ML / Data ===
+*.h5
+*.pt
+*.pth
+*.onnx
+checkpoints/
+wandb/
+runs/
+mlruns/
+*.ckpt
+
+# === OS generated ===
+.Trash-*
+
+# === Crypto / Keys (never commit sensitive material) ===
+*.pem
+*.key
+wallet.dat
+*.wallet
+*.seed
+
+# === Monitoring / Logs specific to mesh ===
+*.pcap
+logs/
+
+# === Build artifacts from prototypes ===
+bin/
+pkg/
