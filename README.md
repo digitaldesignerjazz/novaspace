@@ -50,8 +50,13 @@ NovaSpace is the dedicated home for the hyperspace / constellation / NovaNet "sp
 ```bash
 git clone https://github.com/digitaldesignerjazz/novaspace.git
 cd novaspace
+
+# Option 1: direct run (no install needed)
+python examples/constellation_demo.py
+
+# Option 2: editable install + run
 pip install -e ".[dev]"
-python -m examples.constellation_demo
+python examples/constellation_demo.py
 ```
 
 ## Core Concepts (Current Implementation)
