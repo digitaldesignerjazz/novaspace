@@ -4,10 +4,21 @@ NovaSpace Constellation Demo
 Demonstrates forming hyperspace constellations using current
 LinkHealth + emotional loyalty modulation (from Solnet + Lyra state).
 
-Run: python -m examples.constellation_demo
+Run from repo root after `pip install -e .` :
+  python examples/constellation_demo.py
+
+Or directly (dev):
+  PYTHONPATH=src python examples/constellation_demo.py
 """
 
-from src.novaspace.hyperspace import HyperspaceLink, resonate
+import sys
+from pathlib import Path
+
+# Allow running directly from examples/ without install
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+
+from novaspace.hyperspace import HyperspaceLink, resonate
+
 
 def main():
     hs = HyperspaceLink(local_id="sven-nova-prime")
@@ -29,6 +40,7 @@ def main():
         print(f"  Resonate with {p}: {r:.3f}")
     
     print("Module-level resonate example:", resonate("core", "peer", 0.9, 0.8))
+
 
 if __name__ == "__main__":
     main()
